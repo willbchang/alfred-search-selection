@@ -1,8 +1,9 @@
-<p align="center"><img src="icon.png"></p>
+<p align="center">
+  <img src="icon.png">
+<p align="center"><i>Dedicate to @Y4m1n for her 24th birthday</i><p>
+</p>
 
 # SelectionJedi
-*Dedication to @Y4m1n for her 24th birthday.*
-
 An Alfred workflow to simplify your daily tasks with one shortcuts.
 
 ## Features
