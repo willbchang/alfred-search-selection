@@ -8,7 +8,6 @@ An Alfred workflow to simplify your daily tasks with several shortcuts.
 
 ## Features
 ### Text Search <kbd>alt</kbd>+<kbd>alt</kbd>
-
 - Search Clipboard: Take the first item in clipboard as query string when there is no selection.
   - [x] Decode non-ASCII character
 - Open url(s)
@@ -20,16 +19,20 @@ An Alfred workflow to simplify your daily tasks with several shortcuts.
   - [x] Single word
   - [x] Multiple words
   - [ ] Search a list separately
+
 ### Run Text Terminal <kbd>ctrl</kbd>+<kbd>ctrl</kbd>
  Launch Terminal, run selected text in Terminal
   - [x] Open Terminal
   - [x] Run selected text in Terminal
   - [ ] Stop running empty text
   - [ ] Run inside VSCode Terminal
-### Open File/Folder with VSCode <kbd>cmd</kbd>+<kbd>cmd</kbd>
- Launch text editor, open file/folder in text editor
+
+### Open File/Folder with TextEditor <kbd>cmd</kbd>+<kbd>cmd</kbd>
+Default text editor: VSCode
   - [x] Launch text editor
+  - [x] Bring text editor to front window
   - [x] Open file/folder in text editor 
+
 ### Correct Spelling <kbd>alt</kbd>+<kbd>c</kbd>
 ### Document Search <kbd>alt</kbd>+<kbd>d</kbd>
  Documentation search with [devdocs.io](https://devdocs.io/)
