@@ -6,8 +6,8 @@
 # Selection Toolbox
 An Alfred workflow to simplify your daily tasks with several shortcuts.
 
-## Features
-### Text Search <kbd>alt</kbd>+<kbd>alt</kbd>
+## Usages
+### Search Selection <kbd>alt</kbd>+<kbd>alt</kbd>
 - Search Clipboard: Take the first item in clipboard as query string when there is no selection.
   - [x] Decode non-ASCII character
 - Open url(s)
@@ -15,12 +15,15 @@ An Alfred workflow to simplify your daily tasks with several shortcuts.
   - [ ] Improve url regular expression
   - [ ] Decode non-ASCII charachers
   - [ ] Check top level domain
-- Search in default browser
+  - [ ] Open file path in Finder
+- Text Search in default browser
   - [x] Single word
   - [x] Multiple words
-  - [ ] Search a list separately
+  - [x] Split lines to search separately
+- Image Search
+  - [ ] Search Image
 
-### Run Text Terminal <kbd>ctrl</kbd>+<kbd>ctrl</kbd>
+### Run Text in Terminal <kbd>ctrl</kbd>+<kbd>ctrl</kbd>
  Launch Terminal, run selected text in Terminal
   - [x] Open Terminal
   - [x] Run selected text in Terminal
@@ -32,6 +35,11 @@ Default text editor: VSCode
   - [x] Launch text editor
   - [x] Bring text editor to front window
   - [x] Open file/folder in text editor 
+
+### Copy Enhancement <kbd>alt</kbd>+<kbd>cmd</kbd>+<kbd>c</kbd>
+- [ ] Copy file path
+- [ ] Copy unicode url
+- [ ] Copy html as markdown
 
 ### Correct Spelling <kbd>alt</kbd>+<kbd>c</kbd>
 ### Document Search <kbd>alt</kbd>+<kbd>d</kbd>
