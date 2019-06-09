@@ -1,49 +1,36 @@
-<p align="center">
-  <img src="icon.png">
-<p align="center"><i>Dedicate to @Y4m1n for her 24th birthday</i><p>
+<p align="center">Dedicate to @Y4m1n for her 24th birthday🥳<p>
 </p>
 
-# Selection Toolbox
-An Alfred workflow to simplify your daily tasks with several shortcuts.
+# Search Selection
+Search Selection is an Alfred workflow to do daily search with one hotkey.
+
+## Installation
+Download [here](https://raw.githubusercontent.com/willbchang/alfred-search-selection/master/Search%20Selection.alfredworkflow)
 
 ## Usages
-### Search Selection <kbd>alt</kbd>+<kbd>alt</kbd>
-- Search Clipboard: Take the first item in clipboard as query string when there is no selection.
-  - [x] Decode non-ASCII character
-- Open url(s)
+<kbd>alt</kbd>+<kbd>alt</kbd>
+- [ ] Open url(s)
   - [x] Open all urls from selection text
   - [ ] Improve url regular expression
   - [ ] Decode non-ASCII charachers
   - [ ] Check top level domain
   - [ ] Open file path in Finder
-- Text Search in default browser
+- [ ] Text Search in default browser
   - [x] Single word
   - [x] Multiple words
-  - [x] Split lines to search separately
-- Image Search
-  - [ ] Search Image
+  - [x] Search spreatly
+    - [x] Split with lines
+    - [ ] Split with specific puncutations
+  - [ ] Search the first item in clipboard when selection is empty
+    - [x] Decode non-ASCII character
+    - [ ] Set guard to avoid mistake trigger
+      - [ ] Check the first item's timestamp
+- [ ] Image Search
 
-### Run Text in Terminal <kbd>ctrl</kbd>+<kbd>ctrl</kbd>
- Launch Terminal, run selected text in Terminal
-  - [x] Open Terminal
-  - [x] Run selected text in Terminal
-  - [ ] Stop running empty text
-  - [ ] Run inside VSCode Terminal
+## Contribution
+NOTE: I'm going to refactor the code before 2020.
 
-### Open File/Folder with TextEditor <kbd>cmd</kbd>+<kbd>cmd</kbd>
-Default text editor: VSCode
-  - [x] Launch text editor
-  - [x] Bring text editor to front window
-  - [x] Open file/folder in text editor 
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-### Copy Enhancement <kbd>alt</kbd>+<kbd>cmd</kbd>+<kbd>c</kbd>
-- [ ] Copy file path
-- [ ] Copy unicode url
-- [ ] Copy html as markdown
-
-### Correct Spelling <kbd>alt</kbd>+<kbd>c</kbd>
-### Document Search <kbd>alt</kbd>+<kbd>d</kbd>
- Documentation search with [devdocs.io](https://devdocs.io/)
-
-## Credit
-<div>Icon made by <a href="https://www.flaticon.com/authors/retinaicons" title="Retinaicons">Retinaicons</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+## License
+[MIT](LICENSE)
