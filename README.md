@@ -20,7 +20,7 @@ Download [here](https://raw.githubusercontent.com/willbchang/alfred-search-selec
   - [x] Multiple words
   - [x] Search spreatly
     - [x] Split with lines
-    - [ ] Split with specific puncutations
+    - [ ] Split with specific punctuation mark
   - [ ] Search the first item in clipboard when selection is empty
     - [x] Decode non-ASCII character
     - [ ] Set guard to avoid mistake trigger
