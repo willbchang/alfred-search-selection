@@ -5,34 +5,30 @@
 Search Selection is an Alfred workflow to do daily searches with one hotkey.
 
 ## Installation
-Download [here](https://raw.githubusercontent.com/willbchang/alfred-search-selection/master/Search%20Selection.alfredworkflow)
+1. Download [here](https://raw.githubusercontent.com/willbchang/alfred-search-selection/master/Search%20Selection.alfredworkflow)
+2. Double click `Search Selection.alfredworkflow` to install.
+3. Click `Import` Button.
+4. Double click `Hotkey` and set your shortcut.(I'm using <kbd>alt</kbd> + <kbd>s</kbd>).
 
 ## Usages
-<kbd>alt</kbd>+<kbd>alt</kbd>
-- [x] Open url(s)
-  - [x] Open all urls from selected text
-  - [ ] Improve url regular expression
-  - [ ] Decode non-ASCII charachers
-  - [ ] Check top level domain
-  - [ ] Open file path in Finder
-- [x] Text Search in browser
-  - [x] Single word
-  - [x] Words
-  - [x] Multiple search(try to select several checkboxes on this page and press hotkey after installing)
-    - [x] Search multiple lines separately.
-    - [ ] Search one line separately, split with specific punctuation mark.
-  - [x] Search the first item in clipboard when selection is empty
-    - [x] Decode non-ASCII character
-    - [ ] Check the first item's timestamp to avoid trigger accidently.
-- [ ] Image Search
+<kbd>alt</kbd>+<kbd>s</kbd>
+- Open url(s).
+  - [x] Open all urls from selected text.
+  - [x] Encode url.
+  - [ ] Improve url regular expression.
+- Text Search in Default Browser.
+  - [x] Search single line(Selec any word(s) and press the hotkey).
+  - [x] Search multiple lines.(Try to select several checkboxes on this page and press hotkey)
+- Image Search
+  - [ ] Search Singe image
+  - [ ] Search multiple iamges
 
 ### Change Search Engine
 Default: Google
 1. Open Alfred Preferences
 2. Open `Search Selection` workflow in Workflows
 3. Open `Run Script` object
-4. Find the code: `os.system('open "https://www.google.com/search?q=%s"'% x.strip(string.punctuation))`
-5. Replace `https://www.google.com/search?q=%s` with your favorite search engine.
+4. Replace `https://www.google.com/search?q=%s` with your favorite search engine url.
 
 ## Contribution
 **NOTE: I'm going to refactor the code before 2020.**
