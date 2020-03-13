@@ -31,8 +31,6 @@ Default: Google
 4. Replace `https://www.google.com/search?q=%s` with your favorite search engine url.
 
 ## Contribution
-**NOTE: I'm going to refactor the code before 2020.**
-
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
