@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'erb'
+require 'json'
 
 def search_text(query)
   lines = query.split("\n").reject(&:empty?)
@@ -22,8 +23,18 @@ def open_urls(query)
   extract_urls(query).each { |url| system "open #{url}" }
 end
 
+def search_image(query)
+  response = `curl -X POST -F smfile=@#{query} https://sm.ms/api/v2/upload`
+  response = JSON.parse(response)
+  image_url = response['images'] if response['code'] == 'image_repeated'
+  image_url = response['data']['url'] if response['code'] == 'success'
+  system "open https://images.google.com/searchbyimage?image_url=#{image_url}"
+end
+
 query = ARGV[0]
-if extract_urls(query).any?
+if File.file?(query)
+  search_image(query)
+elsif extract_urls(query).any?
   open_urls(query)
 else
   search_text(query)
