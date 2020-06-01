@@ -2,6 +2,7 @@
 
 require 'erb'
 require 'json'
+require 'shellwords'
 
 def search_text(query)
   lines = query.split("\n").reject(&:empty?)
@@ -32,8 +33,11 @@ def search_image(query)
 end
 
 query = ARGV[0]
-if File.file?(query)
-  search_image(query)
+# Remove single quote around file path from Alfred File Browser
+filepath = /^'.*'$/.match?(query) ? query[1..-2] : query
+
+if File.file?(filepath)
+  search_image(filepath.shellescape)
 elsif extract_urls(query).any?
   open_urls(query)
 else
