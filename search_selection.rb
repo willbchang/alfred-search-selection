@@ -1,4 +1,4 @@
-require "uri"
+require 'uri'
 require 'erb'
 
 urls = URI.extract(ARGV[0])
