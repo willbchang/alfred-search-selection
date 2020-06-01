@@ -18,10 +18,13 @@ def extract_urls(query)
   urls.map { |url| url =~ %r{^https?://} ? url : "https://#{url}" }
 end
 
+def open_urls(query)
+  extract_urls(query).each { |url| system "open #{url}" }
+end
 
 query = ARGV[0]
 if extract_urls(query).any?
-  extract_urls(query).each { |url| system "open #{url}" }
+  open_urls(query)
 else
   search_text(query)
 end
