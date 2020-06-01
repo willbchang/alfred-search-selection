@@ -8,8 +8,8 @@ urls = query.scan(%r{(?i)\b((?:https?:(?:/{1,3}|[a-z0-9%])|[a-z0-9.\-]+[.](?:com
             .flatten # The result before is an embed array [[a], [b]].
             .map { |url| url =~ %r{^https?://} ? url : "https://#{url}" } # Add https to raw domains.
 
-lines = query.split("\n").reject(&:empty?)
 if urls.empty?
+  lines = query.split("\n").reject(&:empty?)
   lines.each do |line|
     system "open 'https://google.com/search?q=#{ERB::Util.url_encode(line)}'"
   end
