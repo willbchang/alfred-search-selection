@@ -2,8 +2,6 @@
 
 require 'erb'
 
-query = ARGV[0]
-
 def search_text(query)
   lines = query.split("\n").reject(&:empty?)
   lines.each do |line|
@@ -20,6 +18,8 @@ def extract_urls(query)
   urls.map { |url| url =~ %r{^https?://} ? url : "https://#{url}" }
 end
 
+
+query = ARGV[0]
 if extract_urls(query).any?
   extract_urls(query).each { |url| system "open #{url}" }
 else
