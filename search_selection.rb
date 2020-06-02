@@ -45,11 +45,15 @@ rescue StandardError
   push_notification('JSON::ParseError', 'Please check the network or contact the developer.')
 end
 
-def search_image(query)
-  response = upload_image(query)
-  image_url = response['images'] if response['code'] == 'image_repeated'
-  image_url = response['data']['url'] if response['code'] == 'success'
-  system "open https://images.google.com/searchbyimage?image_url=#{image_url}"
+def search_image(filepath)
+  response = upload_image(filepath)
+  if response['code'] == 'success'
+    system "open https://images.google.com/searchbyimage?image_url=#{response['data']['url']}"
+  elsif response['code'] == 'image_repeated'
+    system "open https://images.google.com/searchbyimage?image_url=#{response['images']}"
+  else
+    push_notification('https://sm.ms returns unexpected data', 'Please contact the developer.')
+  end
 end
 
 def push_notification(title, text)
