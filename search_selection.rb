@@ -41,7 +41,7 @@ query = ARGV[0]
 filepath = /^'.*'$/.match?(query) ? query[1..-2] : query
 
 if File.file?(filepath)
-  if /^.*\.(png|gif|jpe?g)$/.match?(filepath)
+  if /^.*\.(jpe?g|gif|png|bmp|tif|webp)$/.match?(filepath)
     push_notification('Uploading image', 'Please wait for seconds')
     search_image(filepath.shellescape)
   else
