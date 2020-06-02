@@ -16,10 +16,10 @@ An Alfred workflow to do daily searches(text, image and open urls in text) with 
   ```
   Select this line and press hotkey, it will open willbc.cn and https://news.ycombinator.com/ in the browser. 
   ```
-- **Text Search**: Select word(s)/line(s) on this page and press hotkey.
+- **Text Search**:
   - Search this lines and press the hotkey.
   - Search these two lines and press the hotkey.
-- **Image Search**: Select a local image or browse in Alfred File Search and press hotkey, wait for 5 ~ 10 seconds. 
+- **Image Search**: Select a local image or browse in Alfred File Search and press hotkey, please wait for seconds. 
 
 ### Change Search Engine
 Default: Google
