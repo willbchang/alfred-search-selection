@@ -6,6 +6,11 @@ require 'shellwords'
 
 # Extends File object.
 class File
+  # Remove single quote around file path from Alfred File Browser
+  def self.strip_single_quote(filepath)
+    /^'.*'$/.match?(filepath) ? filepath[1..-2] : filepath
+  end
+
   def self.image?(filepath)
     # Limits by Google Image Search
     # The image must be in one of the following formats:
@@ -47,8 +52,7 @@ def push_notification(title, text)
 end
 
 query = ARGV[0]
-# Remove single quote around file path from Alfred File Browser
-filepath = /^'.*'$/.match?(query) ? query[1..-2] : query
+filepath = File.strip_single_quote(query)
 
 if File.exist?(filepath)
   if File.image?(filepath)
