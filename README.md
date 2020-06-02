@@ -12,13 +12,13 @@ An Alfred workflow to do daily searches(text, image and open urls in text) with 
 
 ## Features & Usages
 <kbd>alt</kbd>+<kbd>s</kbd>
-- **Open urls**: Select text and press hotkey, it will open all urls for you in default browser.
+- **Open url(s)**:
   ```
-  Select this line, it will open willbc.cn and https://news.ycombinator.com/ in the browser. 
+  Select this line and press hotkey, it will open willbc.cn and https://news.ycombinator.com/ in the browser. 
   ```
-- **Text Search**: Select text and press hotkey, it will google it in browser.
-  - Search single line(Select any word(s) and press the hotkey).
-  - Search multiple lines.(Try to select several lines on this page and press hotkey)
+- **Text Search**: Select word(s)/line(s) on this page and press hotkey.
+  - Search this lines and press the hotkey.
+  - Search these two lines and press the hotkey.
 - **Image Search**: Select a local image or browse in Alfred File Search and press hotkey, wait for 5 ~ 10 seconds. 
 
 ### Change Search Engine
@@ -32,6 +32,22 @@ Default: Google
 
 ## Contribution
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+The code logic is very simple:
+```ruby
+if File.exist?(filepath)
+  if File.image?(filepath)
+    push_notification('Uploading... Please wait for seconds', filepath)
+    search_image(filepath.shellescape)
+  else
+    push_notification('Please upload an image', filepath)
+  end
+elsif extract_urls(query).any?
+  open_urls(query)
+else
+  search_text(query)
+end
+```
 
 ## Credits
 - Images are uploaded to https://sm.ms/
