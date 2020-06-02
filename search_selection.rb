@@ -40,6 +40,7 @@ def open_urls(query)
 end
 
 def upload_image(filepath)
+  push_notification('Uploading... Please wait for seconds', filepath)
   JSON.parse(`curl -X POST -F smfile=@#{filepath} https://sm.ms/api/v2/upload`)
 rescue StandardError
   push_notification('JSON::ParseError', 'Please check the network or contact the developer.')
@@ -65,7 +66,6 @@ filepath = File.strip_single_quote(query)
 
 if File.exist?(filepath)
   if File.image?(filepath)
-    push_notification('Uploading... Please wait for seconds', filepath)
     search_image(filepath.shellescape)
   else
     push_notification('Please upload an image', filepath)
