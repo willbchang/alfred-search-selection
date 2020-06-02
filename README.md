@@ -53,10 +53,10 @@ end
 - Image search was inspired by https://github.com/BlackwinMin/alfred-gallery/tree/master/img%20Search
 - It was built with [RubyMine](https://www.jetbrains.com/ruby/) which helped me improve the code quality a lot.
 
-I tried write it with Python, it was not simple at all, I had to deal with some package/language issues. Pain! 
-I tried write it with Shell, all I did was trying to figure out the syntax. Deep Pain!
-I tried write it with Go, well I never get started. Lost...
-I tried Ruby(with little Shell code inside), it just worked without much pain! 💖 I really enjoyed it!
+I tried write it with Python, it was not simple at all, I had to deal with some package/language issues. Pain!<br> 
+I tried write it with Shell, all I did was trying to figure out the syntax. Deep Pain!<br>
+I tried write it with Go, well I never get started. Lost...<br>
+I tried Ruby(with little Shell code inside), it just worked without much pain! 💖 I really enjoyed it!<br>
 
 ## License
 [MIT](LICENSE)
