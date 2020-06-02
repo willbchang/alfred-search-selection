@@ -4,6 +4,16 @@ require 'erb'
 require 'json'
 require 'shellwords'
 
+# Extends File object.
+class File
+  def self.image?(filepath)
+    # Limits by Google Image Search
+    # The image must be in one of the following formats:
+    # .jpg, .gif, .png, .bmp, .tif, or .webp.
+    /^.*\.(jpe?g|gif|png|bmp|tif|webp)$/i.match?(filepath)
+  end
+end
+
 def search_text(query)
   lines = query.split("\n").reject(&:empty?)
   lines.each do |line|
@@ -41,7 +51,7 @@ query = ARGV[0]
 filepath = /^'.*'$/.match?(query) ? query[1..-2] : query
 
 if File.exist?(filepath)
-  if /^.*\.(jpe?g|gif|png|bmp|tif|webp)$/i.match?(filepath)
+  if File.image?(filepath)
     push_notification('Uploading image', 'Please wait for seconds')
     search_image(filepath.shellescape)
   else
