@@ -41,8 +41,12 @@ query = ARGV[0]
 filepath = /^'.*'$/.match?(query) ? query[1..-2] : query
 
 if File.file?(filepath)
-  push_notification('Uploading image', 'Please wait for seconds')
-  search_image(filepath.shellescape)
+  if /^.*(\.png|\.gif|\.jpe?g)$/.match?(filepath)
+    push_notification('Uploading image', 'Please wait for seconds')
+    search_image(filepath.shellescape)
+  else
+    push_notification('Please select an image', '')
+  end
 elsif extract_urls(query).any?
   open_urls(query)
 else
