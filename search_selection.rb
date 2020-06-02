@@ -44,6 +44,7 @@ def upload_image(filepath)
   JSON.parse(`curl -X POST -F smfile=@#{filepath} https://sm.ms/api/v2/upload`)
 rescue StandardError
   push_notification('JSON::ParseError', 'Please check the network or contact the developer.')
+  nil
 end
 
 def extract_image_url(response)
@@ -53,6 +54,7 @@ def extract_image_url(response)
     response['images']
   else
     push_notification('https://sm.ms returns unexpected data', 'Please contact the developer.')
+    nil
   end
 end
 
