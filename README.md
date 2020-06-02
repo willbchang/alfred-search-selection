@@ -37,10 +37,9 @@ The code logic is very simple:
 ```ruby
 if File.exist?(filepath)
   if File.image?(filepath)
-    push_notification('Uploading... Please wait for seconds', filepath)
-    search_image(filepath.shellescape)
+    search_image(filepath)
   else
-    push_notification('Please upload an image', filepath)
+    push_notification('Please select an image', 'Supports jpg, gif, png, bmp, tif, or webp')
   end
 elsif extract_urls(query).any?
   open_urls(query)
@@ -52,7 +51,12 @@ end
 ## Credits
 - Images are uploaded to https://sm.ms/
 - Image search was inspired by https://github.com/BlackwinMin/alfred-gallery/tree/master/img%20Search
-- It was built with [RubyMine](https://www.jetbrains.com/ruby/).
+- It was built with [RubyMine](https://www.jetbrains.com/ruby/) which helped me improve the code quality a lot.
+
+I tried write it with Python, it was not simple at all, I had to deal with some package/language issues. Pain! 
+I tried write it with Shell, all I did was trying to figure out the syntax. Deep Pain!
+I tried write it with Go, well I never get started. Lost...
+I tried Ruby(with little Shell code inside), it just worked without much pain! 💖 I really enjoyed it!
 
 ## License
 [MIT](LICENSE)
