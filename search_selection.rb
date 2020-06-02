@@ -32,11 +32,16 @@ def search_image(query)
   system "open https://images.google.com/searchbyimage?image_url=#{image_url}"
 end
 
+def push_notification(title, text)
+  `osascript -e 'display notification "#{text}" with title "#{title}"'`
+end
+
 query = ARGV[0]
 # Remove single quote around file path from Alfred File Browser
 filepath = /^'.*'$/.match?(query) ? query[1..-2] : query
 
 if File.file?(filepath)
+  push_notification('Uploading image', 'Please wait for seconds')
   search_image(filepath.shellescape)
 elsif extract_urls(query).any?
   open_urls(query)
