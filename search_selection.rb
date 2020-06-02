@@ -39,9 +39,14 @@ def open_urls(query)
   extract_urls(query).each { |url| system "open #{url}" }
 end
 
+def upload_image(filepath)
+  JSON.parse(`curl -X POST -F smfile=@#{filepath} https://sm.ms/api/v2/upload`)
+rescue StandardError
+  push_notification('JSON::ParseError', 'Please check the network or contact the developer.')
+end
+
 def search_image(query)
-  response = `curl -X POST -F smfile=@#{query} https://sm.ms/api/v2/upload`
-  response = JSON.parse(response)
+  response = upload_image(query)
   image_url = response['images'] if response['code'] == 'image_repeated'
   image_url = response['data']['url'] if response['code'] == 'success'
   system "open https://images.google.com/searchbyimage?image_url=#{image_url}"
