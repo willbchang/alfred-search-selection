@@ -56,10 +56,10 @@ filepath = File.strip_single_quote(query)
 
 if File.exist?(filepath)
   if File.image?(filepath)
-    push_notification('Uploading image', 'Please wait for seconds')
+    push_notification('Uploading... Please wait for seconds', filepath)
     search_image(filepath.shellescape)
   else
-    push_notification('Please select an image', '')
+    push_notification('Please upload an image', filepath)
   end
 elsif extract_urls(query).any?
   open_urls(query)
