@@ -79,7 +79,7 @@ if File.exist?(filepath)
   if File.image?(filepath)
     search_image(filepath)
   else
-    push_notification('Please upload an image', filepath)
+    push_notification('Please select an image', 'Supports jpg, gif, png, bmp, tif, or webp')
   end
 elsif extract_urls(query).any?
   open_urls(query)
