@@ -1,4 +1,6 @@
-<p align="center">Dedicated to my friend @Y4m1n for her 24th birthday🥳<p>
+<p align="center">
+  <img src="icon.png" alt="Search Selection Logo" height="256px"><br>
+  <sub>Dedicated to my friend @Y4m1n for her 24th birthday🥳</sub>
 </p>
 
 # Search Selection
