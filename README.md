@@ -25,9 +25,9 @@ An Alfred workflow to do daily searches(text, image and open urls in text) with 
 Default: Google
 1. Search `test` with your favorite search engine.
 2. Get the url from the results, e.g. `https://duckduckgo.com/?q=`
-3. Open Alfred Preferences.
-4. Open `Search Selection` workflow in Alfred Preferences -> Workflows -> Search Selection
-5. Open `Run Script` object.
+3. Open Alfred Preferences -> Workflows -> Search Selection
+4. Right click `Open in Editor` workflow -> Open in Finder
+5. Open `script.rb`, press <kbd>Command</kbd> + <kbd>F</kbd> to find text.
 6. Replace `https://google.com/search?q=` with your favorite search engine url.
 
 ## Contribution
@@ -52,6 +52,7 @@ end
 - Images are uploaded to https://sm.ms/
 - Image search was inspired by https://github.com/BlackwinMin/alfred-gallery/tree/master/img%20Search
 - It was built with [RubyMine](https://www.jetbrains.com/ruby/) which helped me improve the code quality a lot.
+- Icons made by https://www.flaticon.com/authors/roundicons
 
 I tried write it with Python, it was not simple at all, I had to deal with some package/language issues. Pain!<br> 
 I tried write it with Shell, all I did was trying to figure out the syntax. Deep Pain!<br>
