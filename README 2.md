@@ -1,6 +1,6 @@
 <p align="center">
-  <img src="images/icon.png" alt="Search Selection Logo" height="256px"><br>
-  <sub>Dedicated to my friend @Y4m1n for her 24th birthday.</sub>
+  <img src="icon.png" alt="Search Selection Logo" height="150px"><br>
+  <sub>Dedicated to my friend @Y4m1n for her 24th birthday🥳</sub>
 </p>
 
 # Search Selection
@@ -18,13 +18,10 @@ An Alfred workflow to do daily searches(text, image and open urls in text) with 
   ```
   Select this line and press hotkey, it will open willbc.cn and https://news.ycombinator.com/ in the browser. 
   ```
-  ![open urls](images/open-urls.gif)
 - **Text Search**:
   - Search this lines and press the hotkey.
   - Search these two lines and press the hotkey.
-  ![search text](images/search-text.gif)
 - **Image Search**: Select a local image or browse in Alfred File Search and press hotkey, please wait for seconds. 
-  ![search image](images/search-image.gif)
 
 ### Change Search Engine
 Default: Google
