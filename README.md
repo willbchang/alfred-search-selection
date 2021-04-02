@@ -65,4 +65,4 @@ I tried write it with Go, well I never get started. Lost...<br>
 I tried Ruby(with little Shell code inside), it just worked without much pain! 💖 I really enjoyed it!<br>
 
 ## License
-[MIT](LICENSE)
+[AGPL-3.0](LICENSE)
